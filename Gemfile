@@ -13,6 +13,7 @@ gem 'redis'
 gem 'faviconduit'
 gem 'disk_store'
 gem 'dotenv-rails'
+gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
