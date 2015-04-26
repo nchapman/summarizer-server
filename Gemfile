@@ -12,10 +12,9 @@ gem 'rest-client'
 gem 'redis'
 gem 'faviconduit'
 gem 'disk_store'
+gem 'dotenv-rails'
 
 group :development, :test do
-  gem 'dotenv-rails'
-
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
