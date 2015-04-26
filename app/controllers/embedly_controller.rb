@@ -11,7 +11,7 @@ class EmbedlyController < ApplicationController
       $redis.expire(request_hash, 1.day)
     end
 
-    render json: result
+    render body: result, content_type: params[:callback] ? 'application/javascript' : 'application/json'
   end
 
   private
