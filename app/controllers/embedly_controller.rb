@@ -17,7 +17,7 @@ class EmbedlyController < ApplicationController
   private
 
     def request_hash
-      @request_hash = Digest::SHA1.hexdigest(request.GET.to_json)
+      @request_hash ||= Digest::SHA1.hexdigest(request.GET.to_json)
     end
 
     def embedly_extract

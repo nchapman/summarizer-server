@@ -33,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rest-client'
 gem 'redis'
+gem 'faviconduit'
+gem 'disk_store'
 
 group :development, :test do
   gem 'dotenv-rails'
