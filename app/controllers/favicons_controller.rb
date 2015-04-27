@@ -5,6 +5,9 @@ class FaviconsController < ApplicationController
       fetch_favicon(params[:url])
     end
 
+    # ask client to cache for one day
+    response.headers['Expires'] = 1.day.from_now.httpdate
+
     send_data data.read, type: 'image/x-icon', disposition: 'inline'
   end
 

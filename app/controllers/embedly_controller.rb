@@ -11,6 +11,9 @@ class EmbedlyController < ApplicationController
       $redis.expire(request_hash, 1.day)
     end
 
+    # ask client to cache for one day
+    response.headers['Expires'] = 1.day.from_now.httpdate
+
     render body: result, content_type: params[:callback] ? 'application/javascript' : 'application/json'
   end
 
